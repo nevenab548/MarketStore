@@ -12,8 +12,8 @@ namespace MarketStore
             get
             {
                 if (_turnover < 100) return _discountRate = 0.02f;
-                else if (_turnover <= 1000)
-                    return _discountRate = 0.02f+(0.01f*_turnover%100);
+                else if (_turnover <= 800)
+                    return _discountRate = 0.02f+(0.01f*(int)(_turnover/100));
                 else
                     return _discountRate = 0.1f;
             }
